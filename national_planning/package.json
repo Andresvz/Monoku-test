@@ -2,13 +2,18 @@
   "name": "Monoku-test",
   "version": "0.0.1",
   "description": "API RESTful",
+  "repository":" ",
+  "license":"MIT",
   "apidoc": {
     "version": "1.0.0",
-    "name" : "Django new maranha API Docs",
+    "name": "Django new maranha API Docs",
     "title": "Django new maranha API docs",
-    "url" : "http://localhost:8000/api/v1/",
-    "footer" : {
-        "title" : "the3ballsoft - 2016"
+    "url": "http://localhost:8000/api/v1/",
+    "footer": {
+      "title": ""
     }
+  },
+  "dependencies": {
+    "apidoc": "^0.16.1"
   }
 }

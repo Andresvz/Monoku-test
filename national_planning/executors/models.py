@@ -1,5 +1,6 @@
 from django.db import models
 from common.models import TimeStampedModel, SoftDeleteManager
+from overview.models import Overview
 
 class Executor(TimeStampedModel):
     """
@@ -9,6 +10,7 @@ class Executor(TimeStampedModel):
     year = models.CharField(max_length=255)
     code = models.CharField(max_length=255)
     sector = models.CharField(max_length=255)
+    overview = models.OneToOneField(Overview)
 
     class Meta:
         verbose_name = 'Unidad Ejecutora'

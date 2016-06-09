@@ -9,6 +9,6 @@ class ExecutorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Executor
-        fields = ('id', 'name', 'year', 'code', 'sector',)
+        fields = ('id', 'name', 'year', 'code', 'sector','overview',)
 
 

@@ -20,5 +20,5 @@ class ProjectViewSet(mixins.CreateModelMixin,
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     filter_fields = ('id', 'name', 'advance', 'residue', 'liabilities',
-            'obligation','payments','source',)
+            'obligation','payments','source','executor')
 

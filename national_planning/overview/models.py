@@ -1,7 +1,6 @@
 from django.db import models
 from common.models import TimeStampedModel, SoftDeleteManager
 
-
 class Overview(TimeStampedModel):
     """
     informacion general de planeacion
