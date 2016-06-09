@@ -59,6 +59,9 @@ THIRD_PARTY_APPS = (
 # Apps specific for this project go here.
 LOCAL_APPS = (
     'users',  # custom users app
+    'executors',  # executors app
+    'overview',  # overview app
+    'projects',  # projects app
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

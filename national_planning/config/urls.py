@@ -9,9 +9,16 @@ from django.views.generic import TemplateView
 from rest_framework.routers import DefaultRouter
 
 from users.views import UserViewSet
+from executors.views import ExecutorViewSet
+from overview.views import OverviewViewSet
+from projects.views import ProjectViewSet
+
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
+router.register(r'executors', ExecutorViewSet)
+router.register(r'overview', OverviewViewSet)
+router.register(r'projects', ProjectViewSet)
 
 urlpatterns = [
     # Admin
