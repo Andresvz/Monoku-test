@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import viewsets, mixins
+from rest_framework import filters
 
 from .serializers import OverviewSerializer
 from .models import Overview
@@ -19,5 +20,4 @@ class OverviewViewSet(mixins.CreateModelMixin,
     """
     queryset = Overview.objects.all()
     serializer_class = OverviewSerializer
-    filter_fields = ('id', 'programs', 'subprojects', 'projects',
-            'subprojects2','rec','sit',)
+    filter_backends = (filters.DjangoFilterBackend,)

@@ -19,4 +19,5 @@ class ExecutorViewSet(mixins.CreateModelMixin,
     """
     queryset = Executor.objects.all()
     serializer_class = ExecutorSerializer
-    filter_fields = ('id', 'name', 'code', 'sector', 'year','overview')
+    filter_backends = (filters.DjangoFilterBackend,)
+

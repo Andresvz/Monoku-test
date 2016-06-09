@@ -15,10 +15,10 @@ from projects.views import ProjectViewSet
 
 
 router = DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'executors', ExecutorViewSet)
-router.register(r'overview', OverviewViewSet)
-router.register(r'projects', ProjectViewSet)
+router.register(r'^users', UserViewSet)
+router.register(r'^executors', ExecutorViewSet)
+router.register(r'^overview', OverviewViewSet)
+router.register(r'^projects', ProjectViewSet)
 
 urlpatterns = [
     # Admin
@@ -32,6 +32,7 @@ urlpatterns = [
     # REST-API
     url(r'^api/v1/', include('authentication.urls')),
     url(r'^api/v1/', include(router.urls)),
+
 ]
 
 if settings.DEBUG:

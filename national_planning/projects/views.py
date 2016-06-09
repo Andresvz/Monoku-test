@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import viewsets, mixins
+from rest_framework import filters
 
 from .serializers import ProjectSerializer
 from .models import Project
@@ -19,6 +20,5 @@ class ProjectViewSet(mixins.CreateModelMixin,
     """
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
-    filter_fields = ('id', 'name', 'advance', 'residue', 'liabilities',
-            'obligation','payments','source','executor')
+    filter_backends = (filters.DjangoFilterBackend,)
 

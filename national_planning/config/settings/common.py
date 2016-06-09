@@ -64,6 +64,10 @@ LOCAL_APPS = (
     'projects',  # projects app
 )
 
+#filter rest framework
+REST_FRAMEWORK = {
+        'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
+}
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
